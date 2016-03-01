@@ -3,7 +3,6 @@
  *
  */
 import { RECEIVE_EARTHQUAKE, REQUEST_HISTORY, NOTIFY } from '../constants/ActionTypes';
-import ServerWorker from 'worker!./worker.js';
 
 import config from '../config.json';
 
@@ -40,10 +39,16 @@ export function notify(message = { data: {} }) {
  */
 export function listenToEarthquakes() {
   return dispatch => {
-    const worker = new ServerWorker();
-    worker.addEventListener('message', message => {
-      dispatch(receive(message.data));
-      dispatch(notify(message.data));
+    const es = new EventSource(config.streamURL);
+
+    es.addEventListener('quakes', message => {
+      const data = JSON.parse(message.data);
+      dispatch(receive(data));
+      dispatch(notify(data));
+    });
+
+    es.addEventListener('end', () => {
+      this.close();
     });
   };
 }

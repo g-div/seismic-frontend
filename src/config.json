@@ -31,5 +31,6 @@
     "modal": true
   },
   "logo": "/logo.png",
-  "queryURL": "http://seismic.localhorst.io/query"
+  "queryURL": "http://seismic.localhorst.io/query",
+  "streamURL": "http://seismic.localhorst.io/earthquakes"
 }
