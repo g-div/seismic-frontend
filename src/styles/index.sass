@@ -1,0 +1,131 @@
+@import "~bulma/bulma/utilities/utilities";
+@import "~bulma/bulma/config/variables";
+@import "~bulma/bulma/config/generated-variables";
+@import "~bulma/bulma/base/base";
+@import "~bulma/bulma/elements/elements";
+@import "~bulma/bulma/components/components";
+@import "~bulma/bulma/layout/layout";
+
+.hero.is-primary {
+	color: #69707a;
+}
+.container{
+	max-width:none;
+	padding:0 1rem;
+}
+.hero-content{
+	padding:0;
+    max-width: 100%;
+    margin: 0;
+}
+.table tr {
+	cursor:pointer;
+}
+.table tbody {
+	color: #555;
+}
+.bm-item-list .navbar{
+	margin-bottom:0;
+}
+@import "~leaflet/dist/leaflet.css";
+.leaflet-marker-icon.leaflet-zoom-animated.leaflet-clickable {
+	max-height: none !important;
+}
+
+img.leaflet-tile {
+	max-height: inherit;
+} 
+
+@import "~mapbox-gl/mapbox-gl.css";
+.leaflet-gl-layer.mapboxgl-map {
+	display: flex;
+}
+
+@import '~leaflet-pulse-icon/dist/L.Icon.Pulse.css';
+.leaflet-pulsing-icon {
+	text-align: initial;
+  	opacity: 0.5;
+
+}
+
+.leaflet-pulsing-icon.active {
+  opacity: 1;
+}
+
+@import '~leaflet-control-window/src/L.Control.Window.css';
+@import '~leaflet.locatecontrol/dist/L.Control.Locate.css';
+@import '~leaflet-geocoder-mapzen/dist/leaflet-geocoder-mapzen.css';
+.leaflet-pelias-result {
+	text-align: initial;
+}
+
+
+.ReactFlipCard,
+.ReactFlipCard__Front,
+.ReactFlipCard__Back {
+box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	outline: none;
+}
+
+.flip-title {
+	margin-top: 1rem;
+}
+
+html {
+	overflow: hidden;
+}
+
+.noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.bm-overlay {
+	display: none;
+}
+
+table.table th, table.table td {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 0;
+    white-space: nowrap;
+}
+
+#controls>svg {
+	height: 100%;
+	width: 100%;
+}
+.leaflet-control-window {
+	.titlebar {
+		.title {
+			color: black;
+			line-height: 370%;
+
+			img {
+				width: 20%;
+				position: absolute;
+				left: 10%;
+			}
+		}
+	}
+
+	.timeline {
+		width: 60%;
+		padding: 7px;
+	}
+
+	b {
+		font-weight: bold;
+	}
+
+	button:last-child {
+		display: none;
+	}
+}

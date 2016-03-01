@@ -1,0 +1,35 @@
+{
+  "map": {
+    "geocoderToken": "search-rIMI5XQ",
+    "tilelayers": [{
+      "style": "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+      "options": {
+        "attribution": "&copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors, &copy; <a href=\"http://cartodb.com/attributions\">CartoDB</a>"
+      }
+    }],
+    "vectorlayers": [{
+      "name": "Street",
+      "style": "/bright-v8.json",
+      "accessToken": "LOCAL",
+      "attribution": "© OpenStreetMap contributors"
+    }],
+    "options": {
+      "minZoom": 2,
+      "maxZoom": 14,
+      "maxBounds": [
+        [-91, -181],
+        [91, 181]
+      ],
+      "center": [90, 40],
+      "zoom": 2,
+      "zoomControl" : false
+    }
+  },
+  "overlay": {
+    "title": "Seismic map <img src='/logo.png' class='image is-128x128'/>",
+    "content": "This map shows the seismic events registered by the <b>European-Mediterranean Seismological Centre</b> (EMSC). <br><br> The map displays the seismic activity of the last six hours. You can use the <b>timeline</b> placed at the bottom of the page to navigate in time, selecting older earthquakes. <br> <img class='timeline' src='/timeline.png'> <br> The application can be paused in order to avoid notifications about new earthquakes. <br> To read the <b>details</b> about a single event, you can click on it on the map or in the sidebar.",
+    "modal": true
+  },
+  "logo": "/logo.png",
+  "queryURL": "http://seismic.localhorst.io/query"
+}
